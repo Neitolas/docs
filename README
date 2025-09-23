@@ -1,11 +1,39 @@
 Sistema de Usuários e Autenticação em PHP
 
+Integrante
+RA: 1999644
+
 Este projeto é um sistema simples de gerenciamento de usuários desenvolvido em PHP puro. O objetivo é demonstrar a aplicação de boas práticas de programação, como Programação Orientada a Objetos (POO) e princípios de código limpo (DRY e KISS), além de implementar um fluxo de autenticação seguro. Os dados dos usuários são armazenados em um array fixo, sem a necessidade de um banco de dados.
 
 
-Como Rodar o Projeto
+Documentação
 
+Funcionalidades
+O sistema possui as seguintes funcionalidades de autenticação e gerenciamento de usuários:
+
+Registro de Usuário: Permite a criação de um novo usuário, validando o formato do e-mail e a força da senha. As senhas são armazenadas com hash para garantir a segurança.
+
+Login: Autentica um usuário com e-mail e senha, verificando as credenciais de forma segura usando password_verify().
+
+Reset de Senha: Permite a atualização da senha de um usuário existente, aplicando as mesmas regras de segurança da senha.
+
+
+Regras de Negócio
+Validação de E-mail: O e-mail de um novo usuário deve ser válido.
+
+Força da Senha: A senha deve ter no mínimo 8 caracteres, com pelo menos 1 número e 1 letra maiúscula.
+
+E-mail Único: Não é permitido o cadastro de e-mails duplicados.
+
+Limitações
+Persistência de Dados: Os dados dos usuários não são persistidos em um banco de dados; eles são armazenados em um array fixo.
+
+Interface: O projeto não possui uma interface de usuário (front-end) completa. As interações são realizadas através de chamadas diretas a funções no arquivo principal.
+
+
+Como Rodar o Projeto
 Para executar o projeto, siga os passos abaixo:
+
 Garanta que você tenha um ambiente de servidor local, como XAMPP ou WAMP, com o Apache e o PHP instalados e em execução.
 
 Copie o diretório do projeto para a pasta htdocs do seu XAMPP.
@@ -15,19 +43,9 @@ Abra seu navegador e acesse o seguinte URL, substituindo [nome-da-pasta] pelo no
 O arquivo index.php irá executar automaticamente todos os cenários de teste e exibir os resultados diretamente na página.
 
 
-Funcionalidades Implementadas
-
-O sistema possui as seguintes funcionalidades de autenticação e gerenciamento de usuários:
-Registro de Usuário: Permite a criação de um novo usuário, validando o formato do e-mail e a força da senha. As senhas são armazenadas com hash para garantir a segurança.
-
-Login: Autentica um usuário com e-mail e senha, verificando as credenciais de forma segura usando password_verify().
-
-Reset de Senha: Permite a atualização da senha de um usuário existente, aplicando as mesmas regras de segurança da senha.
-
-
 Casos de Uso (Cenários de Teste)
-
 O arquivo index.php foi estruturado para demonstrar o comportamento do sistema através dos seguintes cenários de teste.
+
 1. Cadastro Válido
 Ação: O sistema tenta registrar um novo usuário com um e-mail e senha válidos.
 
