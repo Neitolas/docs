@@ -77,7 +77,7 @@ Entrada: email: 'joao@email.com', password: 'SenhaForte123'.
 
 Resultado Esperado: O sistema exibe a mensagem de erro "Email is already in use."
 
-## Listagem de usuários
+Listagem de usuários
 
 URL: /public/users.php
 
