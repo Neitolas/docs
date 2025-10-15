@@ -9,21 +9,23 @@ class ComposerStaticInit7d26e16107c626ae2d7215ab5e5dbbbb
     public static $prefixLengthsPsr4 = array (
         'A' => 
         array (
-            'App\\' => 4,
+            'App\\\\' => 5,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'App\\' => 
+        'App\\\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
     public static $classMap = array (
-        'App\\Domain\\UserRepository' => __DIR__ . '/../..' . '/src/Domain/UserRepository.php',
-        'App\\Domain\\UserValidator' => __DIR__ . '/../..' . '/src/Domain/UserValidator.php',
-        'App\\Infra\\FileUserRepository' => __DIR__ . '/../..' . '/src/Infra/FileUserRepository.php',
+        'App\\Application\\ProductService' => __DIR__ . '/../..' . '/src/Application/ProductService.php',
+        'App\\Contracts\\ProductRepository' => __DIR__ . '/../..' . '/src/Contracts/ProductRepository.php',
+        'App\\Contracts\\ProductValidator' => __DIR__ . '/../..' . '/src/Contracts/ProductValidator.php',
+        'App\\Domain\\SimpleProductValidator' => __DIR__ . '/../..' . '/src/Domain/SimpleProductValidator.php',
+        'App\\Infra\\FileProductRepository' => __DIR__ . '/../..' . '/src/Infra/FileProductRepository.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

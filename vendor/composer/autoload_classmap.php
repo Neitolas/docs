@@ -6,9 +6,10 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Domain\\UserRepository' => $baseDir . '/src/Domain/UserRepository.php',
-    'App\\Domain\\UserValidator' => $baseDir . '/src/Domain/UserValidator.php',
-    'App\\Infra\\FileUserRepository' => $baseDir . '/src/Infra/FileUserRepository.php',
-    'App\\Application\\ListUsersService' => $baseDir . '/src/Application/ListUsersService.php',
+    'App\\Application\\ProductService' => $baseDir . '/src/Application/ProductService.php',
+    'App\\Contracts\\ProductRepository' => $baseDir . '/src/Contracts/ProductRepository.php',
+    'App\\Contracts\\ProductValidator' => $baseDir . '/src/Contracts/ProductValidator.php',
+    'App\\Domain\\SimpleProductValidator' => $baseDir . '/src/Domain/SimpleProductValidator.php',
+    'App\\Infra\\FileProductRepository' => $baseDir . '/src/Infra/FileProductRepository.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );
